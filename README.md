@@ -75,7 +75,7 @@ _For words beginning with "qu", the program moves "qu" to the end of the word, a
 _For words beginning wih consonants, but include "QU" before the first vowel, the program will include "QU" in the string of consonants moved to the end of the word before adding "ay"_
 * Example Input: squeal
 * Example Output: ealsquay
-* _Is Complete_: _False_
+* _Is Complete_: _True_
 
 _The program manipulates entire sentences and not just single words, as per the specifications listed above_
 * Example Input: I like apples
