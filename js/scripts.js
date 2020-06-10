@@ -19,9 +19,14 @@ const whereIsTheVowel = function (string) {
 const pigLatinConverter = function (string) {
 
   if (string.length === 1 && isAVowel(string)) {
-    return string + "way"
+    return string + "way";
+  } else if (string.charAt(0) === "q" || string.charAt(0) === "Q" && string.charAt(1) === "u" || string.charAt(1) === "U") {
+    const firstVowelLocation = 2;
+    const firstConsonants = string.slice(0, firstVowelLocation);
+    let pigLatinString = string.slice(firstVowelLocation);
+    pigLatinString = pigLatinString + firstConsonants;
+    return pigLatinString;
   } else if (!isAVowel(string)) {
-
     const firstVowelLocation = whereIsTheVowel(string);
     const firstConsonants = string.slice(0, firstVowelLocation);
     let pigLatinString = string.slice(firstVowelLocation);

@@ -50,27 +50,27 @@ _For words beginning with a single consonant the program moves the consonant to 
 _For words beginning with a single consonant the program moves the consonant to the end of the word and adds "ay"_
 * Example Input: change
 * Example Output: hangecay
-* _Is Complete_: _False_
+* _Is Complete_: _True_
 
 _For words beginning with one or more consecutive consonants the program moves the consonants to the end of the word_
 * Example Input: Theodore
-* Example Output: eodoreTh
-* _Is Complete_: _False_
+* Example Output: eodoreThay
+* _Is Complete_: _True_
 
 _For words beginning with one or more consecutive consonants the program moves the consonants to the end of the word and adds "ay"_
 * Example Input: Theodore
 * Example Output: eodoreThay
-* _Is Complete_: _False_
+* _Is Complete_: _True_
 
 _For words beginning with "Y", treat "Y" as a consonant_
 * Example Input: Yes
 * Example Output: esYay
-* _Is Complete_: _False_
+* _Is Complete_: _True_
 
 _For words beginning with "qu", the program moves "qu" to the end of the word, and does not add "ay" or "way"_
 * Example Input: queerly
 * Example Output: eerlyqu
-* _Is Complete_: _False_
+* _Is Complete_: _True_
 
 _For words beginning wih consonants, but include "QU" before the first vowel, the program will include "QU" in the string of consonants moved to the end of the word before adding "ay"_
 * Example Input: squeal
