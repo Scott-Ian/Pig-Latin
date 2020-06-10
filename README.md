@@ -40,12 +40,12 @@ _The Program does nothing to non-alphabetical characters, since they do not cont
 _The program adds "way" to single-letter words beginning with a vowel_
 * Example Input: i
 * Example Output: iway
-* _Is Complete_: _False_
+* _Is Complete_: _True_
 
 _For words beginning with a single consonant the program moves the consonant to the end of the word_
 * Example Input: change
 * Example Output: hangec
-* _Is Complete_: _False_
+* _Is Complete_: _True_
 
 _For words beginning with one or more consecutive consonants the program moves the consonants to the end of the word_
 * Example Input: Theodore
