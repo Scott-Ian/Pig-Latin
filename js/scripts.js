@@ -16,27 +16,46 @@ const whereIsTheVowel = function (string) {
   }
 }
 
+// We need to evaluate if the string contains "QU" - string.indexOf("qu") or "QU" or "Qu" or "qU"
+// if index location of "qu" is less than index of first vowel, then include in firstConsonants
+// else, do nothing. 
+
+
 const pigLatinConverter = function (string) {
 
   if (string.length === 1 && isAVowel(string)) {
     return string + "way";
-  } else if (string.charAt(0) === "q" || string.charAt(0) === "Q" && string.charAt(1) === "u" || string.charAt(1) === "U") {
+
+  } else if (isAVowel(string.charAt(0))) {
+    let pigLatinString = string.slice(1);
+    pigLatinString = pigLatinString + "way";
+    return pigLatinString;
+
+  }else if (string.charAt(0) === "q" || string.charAt(0) === "Q" && string.charAt(1) === "u" || string.charAt(1) === "U") {
     const firstVowelLocation = 2;
     const firstConsonants = string.slice(0, firstVowelLocation);
     let pigLatinString = string.slice(firstVowelLocation);
     pigLatinString = pigLatinString + firstConsonants;
     return pigLatinString;
+
+  }  else if (string.indexOf("qu") != -1 && string.indexOf("qu") < whereIsTheVowel(string)){
+    const firstVowelLocation = whereIsTheVowel(string) + 1;
+    const firstConsonants = string.slice(0, firstVowelLocation);
+    let pigLatinString = string.slice(firstVowelLocation);
+    pigLatinString = pigLatinString + firstConsonants + "ay";
+    return pigLatinString;
+
   } else if (!isAVowel(string)) {
     const firstVowelLocation = whereIsTheVowel(string);
     const firstConsonants = string.slice(0, firstVowelLocation);
     let pigLatinString = string.slice(firstVowelLocation);
     pigLatinString = pigLatinString + firstConsonants + "ay";
     return pigLatinString;
+
   } else {
       return string;
   }
 }
-
 
 
 // UI Logic
