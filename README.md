@@ -30,6 +30,44 @@ _{Let people know what to do if they run into any issues or have questions, idea
 
 _{Tell me about the languages and tools you used to create this app. Assume that I know you probably used HTML and CSS. If you did something really cool using only HTML, point that out.}_
 
+## Specifications/User Stories
+
+_The Program does nothing to non-alphabetical characters, since they do not contain consonants or vowels_
+* Example Input: 3
+* Example Output: 3
+* _Is Complete_: _False_
+
+_The program adds "way" to single-letter words beginning with a vowel_
+* Example Input: i
+* Example Otput: iay
+* _I Complete_: _False_
+
+_For words beginning with a single consonant the program moves the consonant to the end of the word_
+* Example Input: way
+* Example Otput: ayw
+* _I Complete_: _False_
+
+_For words beginning with one or more consecutive consonants the program moves the consonants to the end of the word_
+* Example Input: Theodore
+* Example Otput: eodoreTh
+* _I Complete_: _False_
+
+_For words beginning with one or more consecutive consonants the program moves the consonants to the end of the word and adds "ay"_
+* Example Input: Theodore
+* Example Otput: eodoreThway
+* _I Complete_: _False_
+
+_For words beginning with "Y", treat "Y" as a consonant
+* Example Input: Yes
+* Example Otput: esYay
+* _I Complete_: _False_
+
+_For words beginning with "qu", the program moves "qu" to the end of the word, and does not ad "ay" or "way"_
+* Example Input: queerly
+* Example Otput: eerlyqu
+* _I Complete_: _False_
+
+
 ### License
 
 *{Determine the license under which this application can be used.  See below for more details on licensing.}*
