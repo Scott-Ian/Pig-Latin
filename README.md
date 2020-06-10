@@ -75,7 +75,7 @@ _For words beginning wih consonants, but include "QU" before the first vowel, th
 _The program manipulates entire sentences and not just single words, as per the specifications listed above_
 * Example Input: I like apples
 * Example Output: Iway ikeay pplesaway
-* _Is Complete:_ _False_
+* _Is Complete_: _False_
 
 
 ### License
