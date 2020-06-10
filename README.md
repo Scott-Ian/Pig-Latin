@@ -47,6 +47,11 @@ _For words beginning with a single consonant the program moves the consonant to 
 * Example Output: hangec
 * _Is Complete_: _True_
 
+_For words beginning with a single consonant the program moves the consonant to the end of the word and adds "ay"_
+* Example Input: change
+* Example Output: hangecay
+* _Is Complete_: _False_
+
 _For words beginning with one or more consecutive consonants the program moves the consonants to the end of the word_
 * Example Input: Theodore
 * Example Output: eodoreTh

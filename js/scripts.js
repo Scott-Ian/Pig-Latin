@@ -8,15 +8,25 @@ const isAVowel = function (string) {
   }
 }
 
+const whereIsTheVowel = function (string) {
+  for(let i = 0; i < string.length; i++) {
+    if (isAVowel(string.charAt(i))) {
+      return i;
+    }
+  }
+}
+
 const pigLatinConverter = function (string) {
-  
+
   if (string.length === 1 && isAVowel(string)) {
     return string + "way"
   } else if (!isAVowel(string)) {
-    let firstLetter = string.charAt(0);
-    let newString = string.slice(1);
-    newString = newString + firstLetter;
-    return newString;
+
+    const firstVowelLocation = whereIsTheVowel(string);
+    const firstConsonants = string.slice(0, firstVowelLocation);
+    let pigLatinString = string.slice(firstVowelLocation);
+    pigLatinString = pigLatinString + firstConsonants + "ay";
+    return pigLatinString;
   } else {
       return string;
   }
@@ -30,7 +40,7 @@ $(document).ready (function () {
     event.preventDefault();
     const userInput = $("input#human-input").val();
     const vowels = ["a", "e", "i", "o", "u"];
-   
+    
     const results = pigLatinConverter(userInput);
 
     $("#results").text(results);
