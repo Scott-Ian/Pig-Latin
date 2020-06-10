@@ -39,33 +39,43 @@ _The Program does nothing to non-alphabetical characters, since they do not cont
 
 _The program adds "way" to single-letter words beginning with a vowel_
 * Example Input: i
-* Example Otput: iay
-* _I Complete_: _False_
+* Example Output: iway
+* _Is Complete_: _False_
 
 _For words beginning with a single consonant the program moves the consonant to the end of the word_
-* Example Input: way
-* Example Otput: ayw
-* _I Complete_: _False_
+* Example Input: change
+* Example Output: hangec
+* _Is Complete_: _False_
 
 _For words beginning with one or more consecutive consonants the program moves the consonants to the end of the word_
 * Example Input: Theodore
-* Example Otput: eodoreTh
-* _I Complete_: _False_
+* Example Output: eodoreTh
+* _Is Complete_: _False_
 
 _For words beginning with one or more consecutive consonants the program moves the consonants to the end of the word and adds "ay"_
 * Example Input: Theodore
-* Example Otput: eodoreThway
-* _I Complete_: _False_
+* Example Output: eodoreThay
+* _Is Complete_: _False_
 
-_For words beginning with "Y", treat "Y" as a consonant
+_For words beginning with "Y", treat "Y" as a consonant_
 * Example Input: Yes
-* Example Otput: esYay
-* _I Complete_: _False_
+* Example Output: esYay
+* _Is Complete_: _False_
 
-_For words beginning with "qu", the program moves "qu" to the end of the word, and does not ad "ay" or "way"_
+_For words beginning with "qu", the program moves "qu" to the end of the word, and does not add "ay" or "way"_
 * Example Input: queerly
-* Example Otput: eerlyqu
-* _I Complete_: _False_
+* Example Output: eerlyqu
+* _Is Complete_: _False_
+
+_For words beginning wih consonants, but include "QU" before the first vowel, the program will include "QU" in the string of consonants moved to the end of the word before adding "ay"_
+* Example Input: squeal
+* Example Output: ealsquay
+* _Is Complete_: _False_
+
+_The program manipulates entire sentences and not just single words, as per the specifications listed above_
+* Example Input: I like apples
+* Example Output: Iway ikeay pplesaway
+* _Is Complete:_ _False_
 
 
 ### License
