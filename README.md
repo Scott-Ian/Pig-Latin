@@ -35,7 +35,7 @@ _{Tell me about the languages and tools you used to create this app. Assume that
 _The Program does nothing to non-alphabetical characters, since they do not contain consonants or vowels_
 * Example Input: 3
 * Example Output: 3
-* _Is Complete_: _False_
+* _Is Complete_: _True_
 
 _The program adds "way" to single-letter words beginning with a vowel_
 * Example Input: i
