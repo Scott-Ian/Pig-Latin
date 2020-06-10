@@ -27,9 +27,7 @@ const pigLatinConverter = function (string) {
     return string + "way";
 
   } else if (isAVowel(string.charAt(0))) {
-    let pigLatinString = string.slice(1);
-    pigLatinString = pigLatinString + "way";
-    return pigLatinString;
+    return string + "way";
 
   }else if (string.charAt(0) === "q" || string.charAt(0) === "Q" && string.charAt(1) === "u" || string.charAt(1) === "U") {
     const firstVowelLocation = 2;
